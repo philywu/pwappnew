@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="theme-color" content="#db5945">
+  <title>Login</title>
+  <link rel="manifest" href="/manifest.json">
+
+  <!-- Bootstrap core CSS -->
+  <link href="../css/custom.css" rel="stylesheet">
+  <link href="../css/fa-all.css" rel="stylesheet">
+  <!-- <link href="css/custom-css-bootstrap.css" rel="stylesheet"> -->
+
+  <!-- Custom styles for this template -->
+
+  <style>
+    body {
+      padding-top: 54px;
+    }
+
+    @media (min-width: 576px) {
+      body {
+        padding-top: 56px;
+      }
+    }
+
+    .main {
+      height: 70vh;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <i class="fas fa-arrow-left"></i>Property Detail</a>
+      <div class="navbar-brand float-right">
+        <i class="fas fa-align-right pl-1 pr-1"></i>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="container mt-3 bg-light main">
+
+    <ul class="nav nav-tabs">
+      <li class="nav-item d-none">
+        <a class="nav-link " data-toggle="tab" href="#item">ITEMS</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" data-toggle="tab" href="#detail">DETAIL</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#party">PARTIES</a>
+      </li>
+    </ul>
+
+    <!-- <nav class="tab mb-3">
+      <ul class="nav row">
+        <li class="nav-item col-6 text-center "><div>ITEMS</div></li>
+        <li class="nav-item col-6 text-center active"><div>DETAIL</div></li>
+      </ul>
+    </nav> -->
+    <div class="tab-content">
+      <div id="detail" class="container tab-pane active">
+        <br>
+
+        <div class="card dt-card">
+          <div class="card-header">Full Address</div>
+          <div class="card-body">
+            <div class="card-text">
+              <div class="row">
+                <div class="col-sm-3">
+                  <label for="i_address1">Address</label>
+                </div>
+                <div class="col-sm-9">
+                  <input id="i_adr1" class="form-control" type="text" placeholder="input your address here" />
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-3">
+                </div>
+                <div class="col-sm-3">
+                  <input id="i_suburb" class="form-control" type="text" placeholder="Suburb" />
+                </div>
+                <div class="col-sm-3">
+                  <input id="i_postcode" class="form-control" type="text" placeholder="PostCode" />
+                </div>
+                <div class="col-sm-3">
+                  <input id="i_city" class="form-control" type="text" placeholder="City" />
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card dt-card">
+          <div class="card-header">Pictures</div>
+          <div class="card-body">
+            <div class="card-text">
+              <form action="http://localhost:8000/upload" enctype="multipart/form-data" method="POST">
+                <div class="custom-file">
+
+                  <input type="file" class="custom-file-input" id="customFile" name="photo">
+                  <label class="custom-file-label" for="customFile">Choose file</label>
+
+                </div>
+                <input type="submit" value="Upload Photo" />
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="party" class="container tab-pane fade">
+        <br>
+        <div class="card dt-card">
+          <div class="card-header">Property Manager</div>
+          <div class="card-body">
+            <div class="card-text">
+              <div class="row">
+                <div class="col-12">
+                  <input id="i_pm1" class="form-control" type="text" placeholder="Primary Property Manager Name" />
+                </div>
+                <div class="col-12">
+                  <input id="i_pm2" class="form-control" type="text" placeholder="Secondary Property Manager Name" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card dt-card">
+          <div class="card-header">Land Lord</div>
+          <div class="card-body">
+            <div class="card-text row">
+              <div class="col-12">
+                <input id="i_ll1" class="form-control" type="text" placeholder="Landlord Name" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card dt-card row">
+          <div class="card-header">Tenents</div>
+          <div class="card-body">
+            <div class="card-text">
+              <div class="col-12">
+                <input id="i_tn1" class="form-control" type="text" placeholder="Tenant Name" />
+              </div>
+              <div class="col-12">
+                <input id="i_tn2" class="form-control" type="text" placeholder="Tenant Name" />
+              </div>
+              <div class="col-12">
+                <input id="i_tn3" class="form-control" type="text" placeholder="Tenant Name" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="item" class="container tab-pane fade">
+        <br>
+        <h3>Menu 1</h3>
+        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+      <nav class="navbar fixed-bottom navbar-expand-sm">
+        <div class="btn-toolbar justify-content-between">
+          <ul class="nav mx-auto">
+            <li class="nav-item">
+              <button id="b_submit" type="button" class="btn mr-2">
+                <i class="fas fa-check-circle text-success"></i>
+                <span> Submit</span>
+              </button>
+            </li>
+            <li class="nav-item">
+              <button type="button" class="btn mr-2">
+                <i class="fas fa-save text-warning"></i>
+                <span> Save</span>
+              </button>
+            </li>
+            <li class="nav-item">
+              <button type="button" class="btn">
+                <i class="fas fa-times-circle  text-danger"></i>
+                <span> Cancel</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+  </div>
+
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="../vendor/jquery/jquery.min.js"></script>
+  <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script type="module" src="../scripts/property_detail.js" async></script>
+</body>
+
+</html>

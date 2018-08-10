@@ -1,0 +1,23 @@
+{
+    "title": "PM",
+    "name": "PM ",
+    "version": "0.1.1",
+    "description": "PM",
+    "keywords": [],
+    "scripts": {
+        "test": "mocha",
+        "scss": "sass ./scss/custom.scss ./css/custom.css"
+    },
+    "homepage": "",
+    "dependencies": {
+        "bootstrap": "4.1.1",
+        "express": "^4.16.3",
+        "jquery": "3.3.1"
+    },
+    "devDependencies": {
+        "@fortawesome/fontawesome-free": "^5.2.0",
+        "browser-sync": "2.24.5",
+        "gulp": "^3.9.1",
+        "mocha": "^5.2.0"
+    }
+}

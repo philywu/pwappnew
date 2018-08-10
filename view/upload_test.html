@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="theme-color" content="#db5945">
+  <title>Login</title>
+  <link rel="manifest" href="/manifest.json">
+
+  <!-- Bootstrap core CSS -->
+  <link href="../css/custom.css" rel="stylesheet">
+  <link href="../css/fa-all.css" rel="stylesheet">
+  <!-- <link href="css/custom-css-bootstrap.css" rel="stylesheet"> -->
+
+  <!-- Custom styles for this template -->
+
+  <style>
+    body {
+      padding-top: 54px;
+    }
+
+    @media (min-width: 576px) {
+      body {
+        padding-top: 56px;
+      }
+    }
+
+    .main {
+      height: 70vh;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <i class="fas fa-arrow-left"></i>Upload</a>
+      <div class="navbar-brand float-right">
+        <i class="fas fa-align-right pl-1 pr-1"></i>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <main class="mdl-layout__content">
+    <div class="demo-layout mdl-layout mdl-layout--fixed-header mdl-js-layout mdl-color--grey-100">
+
+        <div class="demo-ribbon"></div>
+        <main class="demo-main mdl-layout__content">
+            
+
+            <!--Second section: File upload-->
+            <div id="image-upload-panel" class="demo-container mdl-grid panel">
+                <div class="center demo-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col padding-20">
+                    <form id="f_upload" enctype="multipart/form-data" action="http://localhost:8000/upload" method="POST">
+                    <article class="upload">
+                        <h3>File Upload</h3>
+                        
+                        <label for="files">Select multiple files: </label>
+                        <input id="files" name="photo" type="file" multiple/>
+                        <button type="button" id="clear" class="mdl-button mdl-js-button mdl-button--raised">Clear</button>
+                        <output id="result"></output>
+                        <button type="submit" class="costco-btn costco-primary ">Continue</button>
+                    </article>
+                   </form>
+                    <div id="myModal" class="img-modal">
+                        <span class="close">&times;</span>
+                        <img class="img-modal-content this-image" id="img01">
+                        <div id="caption"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Third section: Camera App-->
+            
+        </main>
+    </div>
+</main>
+
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="../vendor/jquery/jquery.min.js"></script>
+  <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script type="module" src="../scripts/uploadtest.js" async></script>
+</body>
+
+</html>

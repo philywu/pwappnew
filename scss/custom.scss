@@ -1,0 +1,49 @@
+
+$colors: (
+    "blue": #0099FF,
+);
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+//bottom bar 
+.bottom-bar{
+    .nav {
+        .nav-item {
+            .btn {
+                color : $secondary ;             
+            }
+            .active {
+                color: $primary;   
+            }
+            
+        }
+    }
+}
+//detail card
+.dt-card {
+    width: 100%;
+    margin: 0 0 10px 0;
+    .card-header {        
+        color: $primary;          
+        font-weight: bold;       
+    }
+    
+    input {
+        margin: 0 0 5px 0;
+    }
+    
+}
+
+nav.tab {
+    .active {
+        border-bottom: $primary 2px solid;
+      }
+      .nav-item {
+        padding: 0;
+        div {
+            margin: 5px 0 5px 0;    
+            border-right : $card-border-color 1px solid
+        }
+      }
+} 
+
