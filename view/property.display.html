@@ -67,12 +67,6 @@
       </li>
     </ul>
 
-    <!-- <nav class="tab mb-3">
-      <ul class="nav row">
-        <li class="nav-item col-6 text-center "><div>ITEMS</div></li>
-        <li class="nav-item col-6 text-center active"><div>DETAIL</div></li>
-      </ul>
-    </nav> -->
     <div class="tab-content">
       <div id="detail" class="container tab-pane active">
         <br>
@@ -86,19 +80,26 @@
                   <label for="i_adr1">Address</label>
                 </div>
                 <div class="col-sm-9">
-                  <input id="i_adr1" class="form-control" type="text" value="100 great south Road" placeholder="input your address here" />
+                    <div id="d_adr1">100 great south Road</div>
+                    <input id="i_adr1" class="form-control" type="text" value="100 great south Road" placeholder="input your address here" />
+
                 </div>
               </div>
               <div class="row">
                 <div class="col-sm-3">
                 </div>
                 <div class="col-sm-3">
-                  <input id="i_suburb" class="form-control" type="text" placeholder="Suburb" />
+                    <div id="d_suburb"></div>
+                    <input id="i_suburb" class="form-control" type="text" placeholder="Suburb" />
+
                 </div>
                 <div class="col-sm-3">
-                  <input id="i_postcode" class="form-control" type="text" placeholder="PostCode" />
+                    <div id="d_postcode"></div>
+                    <input id="i_postcode" class="form-control" type="text" placeholder="PostCode" />
+
                 </div>
                 <div class="col-sm-3">
+                    <div id="d_city"></div>
                   <input id="i_city" class="form-control" value="auckland" type="text" placeholder="City" />
                 </div>
 
@@ -210,7 +211,7 @@
   <!-- Bootstrap core JavaScript -->
   <script src="../vendor/jquery/jquery.min.js"></script>
   <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script type="module" src="../scripts/property_detail.js" async></script>
+  <script type="module" src="../scripts/property_display.js" async></script>
 </body>
 
 </html>

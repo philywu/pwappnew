@@ -47,3 +47,163 @@ nav.tab {
       }
 } 
 
+.upload {
+    .image-container {
+        float: left;
+        margin: 2px;
+        width: 100px;
+        height: 100px;
+        position: relative;
+      }
+      .file-action {
+        position: relative;
+        float:right;
+        width: 70px;
+        margin:0;
+      }
+
+      ul {
+        list-style: none;
+        margin:0;
+        padding:0;
+        align-items: right;
+      }
+      #upload-photo {
+        display: none;
+        height: 0;
+        width: 0;
+      }
+
+      #upload-photo-label {
+        border: 1px solid #cccccc;
+        padding: 5px 5px;  
+        font-size: 13px;
+      }
+       #upload-photo-label:active{
+        background:#ccc;
+      }
+      .button {
+        border: 1px solid #cccccc;
+        background:#FFF;
+        padding: 5px 5px;  
+        font-size: 13px;
+      }
+      .button:active{
+        background:#ccc;
+      }
+      output#result {
+        float:left;
+        margin:0;
+        width: 75%;
+        height: 140px;
+        border: solid 1px #000;
+        .image-container {
+            i {
+                position: absolute;
+                top: 0;
+                right: 0;
+                opacity: 0;
+                transition: 0.7s;
+              }
+            i:hover {
+                display: block;
+                cursor: pointer;
+              }
+            .thumbnail {
+                position: relative;
+                top: 50%;
+                -webkit-transform: translateY(-50%);
+                transform: translateY(-50%);
+                width: auto;
+                height: auto;
+                max-height: 100%;
+                max-width: 100%;
+                display: block;
+                margin: 0 auto;
+              }
+        }
+
+        
+      }
+
+      #clear {
+        display: none;
+      }
+      #result {
+        width: 100%;
+        height:100%;
+        
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        flex : 1; 
+      
+        flex-wrap: wrap;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+        margin-bottom: 20px;
+      }
+
+
+}
+
+ 
+  
+  .thumb {
+    height: 75px;
+    border: 1px solid #000;
+    margin: 10px 5px 0 0;
+  }
+  
+  .material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 12px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  
+  .img-modal {
+    display: none;
+    /* Hidden by default */
+    visibility: hidden;
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.9);
+    /* Black w/ opacity */
+  }
+  
+  
+  /* Modal Content (image) */
+  
+  .img-modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+  }
+  
+

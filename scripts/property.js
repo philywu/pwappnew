@@ -15,7 +15,8 @@ import { PropertyCard} from '../module/card.js';
     };
     app.callJson = function() {
         console.log("call json");
-        const url = "http://localhost:8000/api/properties";
+        //const url = "http://localhost:8000/api/properties";
+        const url = "http://219.88.233.164:4000/api/property/";
         // $.getJSON("http://localhost:8000/api/properties",function (result){
         //     $.each(result, function(i, field){
         //         console.log("item:" ,field);

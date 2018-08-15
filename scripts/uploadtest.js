@@ -55,7 +55,7 @@ import {
                                 for (let file of files) {
                                     if (removedFileName && file.name.includes(removedFileName)) {
                                         console.log(file);
-                                        uploadForm.reset();
+                                       // uploadForm.reset();
 
                                     }
 
@@ -69,41 +69,7 @@ import {
 
                             div.appendChild(ico);
                             output.insertBefore(div, null);
-                            // div.innerHTML = `<img class='thumbnail' src='${picFile.result}'` +
-                            //     "title='preview image'/><i class='material-icons'>X</i>";   
-                            // output.insertBefore(div, null);
-                            //remove an image from the list when you click/tap on it
-                            //let icons = document.getElementsByClassName('image-container');
-                            // let icons = div.getElementsByTagName("i");
-                            // let uploadForm = document.getElementById("f_upload");
-                            // for (let icon of icons){
-                            //     icon.addEventListener("click", function() {
-
-                            //         let imgDiv = this.parentElement;
-                            //         let files =  document.getElementById('files').files;
-                            //         let removedFileName = imgDiv.getAttribute("name");
-                            //         for (let file of files){
-                            //             if (removedFileName && file.name.includes(removedFileName)){
-                            //                 console.log(file);   
-                            //                 uploadForm.reset();
-
-                            //             }
-
-
-                            //         }
-
-                            //         imgDiv.remove();
-                            //     });
-                            //}
-
-
-                            //var img = $('.image-container');
-
-                            // $(img, this).click(function() {
-                            //     console.log("image clicked");
-                            //     var modal = $('#myModal');
-                            //     $(modal).css("display", "block")
-                            // });
+                            
                         });
                         picReader.readAsDataURL(file);
                     } else {
@@ -111,6 +77,42 @@ import {
                     }
                 }
             });
+            let form =  document.getElementById("f_upload")
+            form.addEventListener("submit",function (ev){
+               
+                let files = document.getElementById('files').files;
+                let images = document.getElementsByClassName('image-container');
+                let oData = new FormData(form);
+                Array.from(files).forEach((f,i) => {
+                    Array.from(images).forEach( (imgDiv) => {
+                        let remainFileName = imgDiv.getAttribute("name");
+                        if (remainFileName && f.name.includes(remainFileName)) {
+                            //console.log(imgDiv);
+                            oData.append(`photo`, f)
+                           // uploadForm.reset();
+
+                        }
+
+                    });
+                   
+                })
+                //oData.append("photo",files[0]);
+                oData.delete("photo1");
+                let oReq = new XMLHttpRequest();
+                oReq.open("POST", "http://localhost:8000/upload", true);
+                oReq.onload = function(oEvent) {
+                  if (oReq.status == 200) {
+                    //oOutput.innerHTML = "Uploaded!";
+                    console.log("uploaded");
+                  } else {
+                   // oOutput.innerHTML = "Error " + oReq.status + " occurred when trying to upload your file.<br \/>";
+                  console.log("error");
+                }
+                };
+              
+                oReq.send(oData);
+                ev.preventDefault();  
+            } ,false)
         }
     };
     app.init();

@@ -8596,15 +8596,54 @@ nav.tab .nav-item div {
   border-right: rgba(0, 0, 0, 0.125) 1px solid;
 }
 
-
 .upload .image-container {
   float: left;
-  margin: 10px;
-  width: 140px;
-  height: 140px;
+  margin: 2px;
+  width: 100px;
+  height: 100px;
   position: relative;
 }
-
+.upload .file-action {
+  position: relative;
+  float: right;
+  width: 70px;
+  margin: 0;
+}
+.upload ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: right;
+}
+.upload #upload-photo {
+  display: none;
+  height: 0;
+  width: 0;
+}
+.upload #upload-photo-label {
+  border: 1px solid #cccccc;
+  padding: 5px 5px;
+  font-size: 13px;
+}
+.upload #upload-photo-label:active {
+  background: #ccc;
+}
+.upload .button {
+  border: 1px solid #cccccc;
+  background: #FFF;
+  padding: 5px 5px;
+  font-size: 13px;
+}
+.upload .button:active {
+  background: #ccc;
+}
+.upload output#result {
+  float: left;
+  margin: 0;
+  width: 75%;
+  height: 140px;
+  border: solid 1px #000;
+}
 .upload output#result .image-container i {
   position: absolute;
   top: 0;
@@ -8612,17 +8651,11 @@ nav.tab .nav-item div {
   opacity: 0;
   transition: 0.7s;
 }
-
-.upload output#result .image-container:hover i {
-  opacity: 1;
-}
-
 .upload output#result .image-container i:hover {
   display: block;
   cursor: pointer;
 }
-
-.upload .image-container .thumbnail {
+.upload output#result .image-container .thumbnail {
   position: relative;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -8634,21 +8667,16 @@ nav.tab .nav-item div {
   display: block;
   margin: 0 auto;
 }
-
 .upload #clear {
   display: none;
 }
-
 .upload #result {
   width: 100%;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -ms-flex-wrap: wrap;
+  flex: 1;
   flex-wrap: wrap;
   -webkit-box-pack: start;
   -ms-flex-pack: start;
@@ -8663,10 +8691,10 @@ nav.tab .nav-item div {
 }
 
 .material-icons {
-  font-family: 'Material Icons';
+  font-family: "Material Icons";
   font-weight: normal;
   font-style: normal;
-  font-size: 24px;
+  font-size: 12px;
   line-height: 1;
   letter-spacing: normal;
   text-transform: none;
@@ -8676,7 +8704,6 @@ nav.tab .nav-item div {
   direction: ltr;
   -webkit-font-smoothing: antialiased;
 }
-
 
 .img-modal {
   display: none;
@@ -8696,15 +8723,13 @@ nav.tab .nav-item div {
   /* Full height */
   overflow: auto;
   /* Enable scroll if needed */
-  background-color: rgb(0, 0, 0);
+  background-color: black;
   /* Fallback color */
   background-color: rgba(0, 0, 0, 0.9);
   /* Black w/ opacity */
 }
 
-
 /* Modal Content (image) */
-
 .img-modal-content {
   margin: auto;
   display: block;
@@ -8713,4 +8738,3 @@ nav.tab .nav-item div {
 }
 
 /*# sourceMappingURL=custom.css.map */
-
